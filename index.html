@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MultSelect Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style id="multiselect_dropdown_styles">
         .selectBox{
             width: 200px;
@@ -30,7 +31,6 @@
   display:inline-block;
 }
 .multiselect-dropdown span.optext{
-  background-color:lightgray;
   padding:1px 0.75em; 
 }
 .multiselect-dropdown span.optext .optdel {
@@ -43,8 +43,13 @@
 }
 .multiselect-dropdown span.optext .optdel:hover { color: #c66;}
 .multiselect-dropdown span.placeholder{
-  color:#ced4da;
+  color:#141414;
+  font-size: 20px;
 }
+#no-search{
+  color: black;
+}
+
 .multiselect-dropdown-list-wrapper{
   box-shadow: gray 0 3px 8px;
   z-index: 100;
@@ -58,6 +63,15 @@
   left: 0;
   right: 0;
   background: white;
+}
+.multiselect-dropdown-list-wrapper .close-dropdown{
+    position: relative;
+    font-size: 30px;
+    right: 0;
+    float: right;
+    top: 0;
+    padding: 5px 5px;
+    cursor: pointer;
 }
 .multiselect-dropdown-list-wrapper .multiselect-dropdown-search{
   margin-bottom:5px;
@@ -94,7 +108,7 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <select name="field1" id="field1" value="select options" search="search" className="selectBox" data-height="6rem" data-width="20rem"  multiple multiselect-search="true" multiselect-select-all="false" multiselect-max-items="1" onchange="console.log(this.selectedOptions)">
+    <select name="field1" id="field1" search-warning="No Item is available" value="select options" search="search" className="selectBox" data-height="6rem" data-width="20rem"  multiple multiselect-search="true" multiselect-select-all="false" multiselect-max-items="1" onchange="console.log(this.selectedOptions)">
           <option>Abarth</option>
           <option>Alfa Romeo</option>
           <option>Aston Martin</option>
@@ -106,7 +120,7 @@
           <option>Chevrolet</option>
          
         </select>
-    <select name="field2" id="field2" value="select options" search="search" className="selectBox" data-height="6rem" data-width="20rem"  multiple multiselect-search="true" multiselect-select-all="false" multiselect-max-items="1" onchange="console.log(this.selectedOptions)">
+    <select name="field2" id="field2" value="select options" search-warning="No Item is available" search="search" className="selectBox" data-height="6rem" data-width="20rem"  multiple multiselect-search="true" multiselect-select-all="false" multiselect-max-items="1" onchange="console.log(this.selectedOptions)">
           <option>Bangladesh</option>
           <option>Africa</option>
           <option>Australia</option>
